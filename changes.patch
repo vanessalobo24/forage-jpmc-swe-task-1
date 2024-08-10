@@ -1,0 +1,11 @@
+git clone https://github.com/your-repository-link
+cd your-repository-name
+npm install
+function greet(name: string): string {
+  return "Hello, " + name;
+}
+
+console.log(greet(123)); // Error: Argument of type 'number' is not assignable to parameter of type 'string'.
+console.log(greet("Alice")); // Correct usage
+npm start
+git diff > changes.patch
