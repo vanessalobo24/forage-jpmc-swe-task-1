@@ -1,0 +1,5 @@
+python datafeed/server3.py
+npm start
+git add .
+git commit -m "Describe your changes"
+git diff > changes.patch
