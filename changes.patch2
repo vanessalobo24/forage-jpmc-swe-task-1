@@ -1,0 +1,40 @@
+git checkout -b task-2-fixes
+interface IState {
+    showGraph: boolean;
+    // other state properties
+}
+constructor(props: any) {
+    super(props);
+    this.state = {
+        showGraph: false,
+        // other state properties
+    };
+}
+renderGraph() {
+    if (this.state.showGraph) {
+        return <Graph />;
+    }
+    return null;
+}
+getDataFromServer() {
+    const interval = setInterval(() => {
+        // Fetch data from server
+        // Handle the response
+    }, 1000); // Fetch data every second
+}
+class PerspectiveViewerElement extends HTMLElement {
+    // implementation
+}
+componentDidMount() {
+    const elem = document.getElementsByTagName('perspective-viewer')[0] as PerspectiveViewerElement;
+    // other implementation
+}
+elem.setAttribute('view', 'y_line');
+elem.setAttribute('column-pivots', '["stock"]');
+elem.setAttribute('row-pivots', '["timestamp"]');
+elem.setAttribute('columns', '["top_ask_price"]');
+elem.setAttribute('aggregates', '{"top_ask_price": "avg"}');
+git add src/App.tsx src/Graph.tsx
+git commit -m "Updated App.tsx and Graph.tsx for continuous updates and data aggregation"
+git push origin task-2-fixes
+git diff main task-2-fixes > changes.patch
